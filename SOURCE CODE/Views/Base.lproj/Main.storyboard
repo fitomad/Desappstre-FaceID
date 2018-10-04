@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Imagen Secreta-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Imagen Secreta" id="BYZ-38-t0r" customClass="SecureViewController" customModule="SecureImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNe-X2-Q8T">
+                                <rect key="frame" x="24" y="529" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vuy-a0-5uI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Mostrar la imagen"/>
+                                <connections>
+                                    <action selector="handleUnlockButtonTapWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="puF-wS-Dre"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GranVia" translatesAutoresizingMaskIntoConstraints="NO" id="Fio-CL-pQk">
+                                <rect key="frame" x="24" y="24" width="327" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fio-CL-pQk" secondAttribute="height" multiplier="1:1" id="dOa-ys-gtQ"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-fw-O1I">
+                                <rect key="frame" x="24" y="24" width="327" height="327"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bXH-s9-g4Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="327"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-eO-dBa">
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="327"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="5ag-MX-FRy">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="327"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wH6-fw-O1I" secondAttribute="height" multiplier="1:1" id="dBD-HF-Guw"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En el Simulador debes tener marcada la opción &quot;Enrolled&quot; disponible en el menú Hardware / Face ID." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmW-Vk-1jY">
+                                <rect key="frame" x="24" y="375" width="327" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JNe-X2-Q8T" secondAttribute="trailing" constant="24" id="3eJ-Ve-E57"/>
+                            <constraint firstItem="Fio-CL-pQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="47i-nP-cwE"/>
+                            <constraint firstItem="wH6-fw-O1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="AET-fh-tb8"/>
+                            <constraint firstItem="JNe-X2-Q8T" firstAttribute="top" secondItem="rmW-Vk-1jY" secondAttribute="bottom" constant="24" id="NJZ-RS-nWp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JNe-X2-Q8T" secondAttribute="bottom" constant="24" id="OR3-uo-y3Z"/>
+                            <constraint firstItem="rmW-Vk-1jY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Oeb-C2-YaK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wH6-fw-O1I" secondAttribute="trailing" constant="24" id="Xie-x6-gCL"/>
+                            <constraint firstItem="JNe-X2-Q8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Zcc-xn-6LD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmW-Vk-1jY" secondAttribute="trailing" constant="24" id="jCL-U8-UOw"/>
+                            <constraint firstItem="Fio-CL-pQk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="kXz-MR-7LG"/>
+                            <constraint firstItem="wH6-fw-O1I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="qW5-Ab-ayT"/>
+                            <constraint firstItem="rmW-Vk-1jY" firstAttribute="top" secondItem="wH6-fw-O1I" secondAttribute="bottom" constant="24" id="uKN-9z-SCr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fio-CL-pQk" secondAttribute="trailing" constant="24" id="uOn-9d-3IL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="blurredView" destination="wH6-fw-O1I" id="J0X-8x-WQu"/>
+                        <outlet property="buttonUnlock" destination="JNe-X2-Q8T" id="R0H-Sb-Zob"/>
+                        <outlet property="imageViewSecret" destination="Fio-CL-pQk" id="uNd-nO-xy7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GranVia" width="640" height="640"/>
+    </resources>
+</document>

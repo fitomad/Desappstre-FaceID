@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  SecureImage
+
+  Created by Adolfo Vera Blasco on 03/10/2018.
+  Copyright © 2018 desappstre {estudio}. All rights reserved.
+*/
+
+"CONTEXT_CANCEL_TITLE" = "Cancelar";
+"CONTEXT_FALLBACK_TITLE" = "Usa el código numérico";
+"CONTEXT_REASON" = "Sólo el propietario de este dispositivo podrá ver la foto";
+"AUTHENTICATION_SUCCESS_MESSAGE" = "Bienvenido a Setec Astronomy";
+"AUTHENTICATION_ERROR_MESSAGE" = "¿Seguro que tú eres tú?";
+"AUTHENTICATION_POLICY_ERROR_MESSAGE" = "Parece que no podemos validar tu identidad de ninguna manera...";
